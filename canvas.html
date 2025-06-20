@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Canvas Example</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+
+  const path = new Path2D();
+  path.moveTo(100, 100);
+  path.lineTo(200, 50);
+  path.lineTo(300, 100);
+  path.closePath();
+
+  ctx.fillStyle = 'blue';
+  ctx.fill(path);
+  ctx.strokeStyle = 'black';
+  ctx.stroke(path);
+</script>
+
+</body>
+</html>
